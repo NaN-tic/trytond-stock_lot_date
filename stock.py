@@ -1,0 +1,18 @@
+#This file is part stock_lot_date module for Tryton.
+#The COPYRIGHT file at the top level of this repository contains 
+#the full copyright notices and license terms.
+from trytond.model import fields
+from trytond.pool import Pool, PoolMeta
+
+__all__ = ['Lot']
+__metaclass__ = PoolMeta
+
+
+class Lot:
+    __name__ = 'stock.lot'
+    lot_date = fields.Date('Date Lot')
+
+    @staticmethod
+    def default_lot_date():
+        Date = Pool().get('ir.date')
+        return Date.today()
