@@ -12,6 +12,12 @@ class Lot:
     __name__ = 'stock.lot'
     lot_date = fields.Date('Date Lot')
 
+    @classmethod
+    def __setup__(cls):
+        super(Lot, cls).__setup__()
+        cls._order.insert(0, ('lot_date', 'ASC'))
+        cls._order.insert(1, ('id', 'DESC'))
+
     @staticmethod
     def default_lot_date():
         Date = Pool().get('ir.date')
