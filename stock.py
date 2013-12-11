@@ -15,7 +15,7 @@ class Lot:
     @classmethod
     def __setup__(cls):
         super(Lot, cls).__setup__()
-        cls._order.insert(0, ('lot_date', 'ASC'))
+        cls._order.insert(0, ('lot_date', 'DESC'))
         cls._order.insert(1, ('id', 'DESC'))
 
     @staticmethod
