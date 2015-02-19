@@ -44,7 +44,7 @@ setup(name='%s_%s' % (PREFIX, MODULE),
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytond-stock_lot_date",
+    download_url="https://bitbucket.org/zikzakmedia/trytond-%s" % MODULE,
     package_dir={'trytond.modules.%s' % MODULE: '.'},
     packages=[
         'trytond.modules.%s' % MODULE,
@@ -52,7 +52,7 @@ setup(name='%s_%s' % (PREFIX, MODULE),
         ],
     package_data={
         'trytond.modules.%s' % MODULE: (info.get('xml', [])
-            + ['tryton.cfg']),
+            + ['tryton.cfg', 'view/*.xml', 'locale/*.po']),
         },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
