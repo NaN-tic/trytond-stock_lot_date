@@ -10,7 +10,7 @@ __metaclass__ = PoolMeta
 
 class Lot:
     __name__ = 'stock.lot'
-    lot_date = fields.Date('Date Lot')
+    lot_date = fields.Date('Date Lot', required=True)
 
     @classmethod
     def __setup__(cls):
