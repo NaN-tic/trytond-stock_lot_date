@@ -13,6 +13,10 @@ class StockLotOutAutoassignTestCase(unittest.TestCase):
     def setUp(self):
         trytond.tests.test_tryton.install_module('stock_lot_date')
 
+    def test0005views(self):
+        'Test views'
+        test_view('stock_lot_date')
+
     def test0006depends(self):
         'Test depends'
         test_depends()
