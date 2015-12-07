@@ -4,11 +4,11 @@
 # the full copyright notices and license terms.
 import unittest
 import trytond.tests.test_tryton
-from trytond.tests.test_tryton import test_depends
+from trytond.tests.test_tryton import test_depends, test_view
 
 
-class StockLotOutAutoassignTestCase(unittest.TestCase):
-    'Test Stock Lot Out Autoassign module'
+class StockLotDateTestCase(unittest.TestCase):
+    'Test Stock Lot Date module'
 
     def setUp(self):
         trytond.tests.test_tryton.install_module('stock_lot_date')
@@ -25,7 +25,7 @@ class StockLotOutAutoassignTestCase(unittest.TestCase):
 def suite():
     suite = trytond.tests.test_tryton.suite()
     suite.addTests(unittest.TestLoader().loadTestsFromTestCase(
-        StockLotOutAutoassignTestCase))
+        StockLotDateTestCase))
     return suite
 
 if __name__ == '__main__':
