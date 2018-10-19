@@ -7,8 +7,7 @@ from trytond.pool import Pool, PoolMeta
 __all__ = ['Lot']
 
 
-class Lot:
-    __metaclass__ = PoolMeta
+class Lot(metaclass=PoolMeta):
     __name__ = 'stock.lot'
     lot_date = fields.Date('Date Lot', required=True)
 
